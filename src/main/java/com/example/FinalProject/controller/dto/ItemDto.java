@@ -1,16 +1,7 @@
-package com.example.FinalProject;
+package com.example.FinalProject.controller.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-// This tells Hibernate to make a table out of this class
-public class Item {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer id;
+public class ItemDto
+{
 
     private String name;
 
@@ -18,14 +9,11 @@ public class Item {
 
     private String imageUrl;
 
-    public Integer getId()
+    public ItemDto( String name, String description, String imageUrl )
     {
-        return id;
-    }
-
-    public void setId( Integer id )
-    {
-        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.imageUrl = imageUrl;
     }
 
     public String getName()
