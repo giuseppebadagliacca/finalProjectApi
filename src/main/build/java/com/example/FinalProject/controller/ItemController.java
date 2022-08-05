@@ -6,8 +6,6 @@ import com.example.FinalProject.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @RestController
 @RequestMapping("/item")
 public class ItemController{
@@ -26,14 +24,16 @@ public class ItemController{
         return itemService.all();
     }
 
+    @CrossOrigin
     @PostMapping
     public Item save( @RequestBody ItemDto itemDto )
     {
         return itemService.save(new Item(itemDto));
     }
 
-    @GetMapping("/{id}")
-    public Optional<Item> findItemById(@PathVariable Integer id ){
+    @GetMapping( "/{id}" )
+    public Item findItemById( @PathVariable Integer id )
+    {
         return itemService.findById( id );
     }
 
@@ -46,7 +46,6 @@ public class ItemController{
         item.setImageUrl( itemDto.getImageUrl() );
         return itemService.save( item );
     }
-
     @DeleteMapping( "/{id}" )
     public void delete( @PathVariable Integer id )
     {

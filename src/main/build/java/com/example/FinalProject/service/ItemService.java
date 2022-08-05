@@ -3,7 +3,6 @@ package com.example.FinalProject.service;
 import com.example.FinalProject.repository.entity.Item;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ItemService
 {
@@ -13,6 +12,6 @@ public interface ItemService
 
     List<Item> all();
 
-    Optional<Item> findById(int itemId);
+    Item findById(int itemId);
 
 }

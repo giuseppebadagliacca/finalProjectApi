@@ -1,7 +1,6 @@
 package com.example.FinalProject.controller.dto;
 
-public class ItemDto
-{
+public class ItemDto {
 
     private String name;
 
