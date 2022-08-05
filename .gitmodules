@@ -1,0 +1,3 @@
+[submodule "src/main/build/frontendmain"]
+	path = src/main/build/frontendmain
+	url = https://github.com/giuseppebadagliacca/finalProject
